@@ -17,16 +17,16 @@ public class profileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        name= findViewById(R.id.editText_one);
+        name= findViewById(R.id.textView_id_one);
 
 
         //setText(savedInstanceState.getString("name","dure giya mor"));
 
         SharedPreferences sharedPreferences = getSharedPreferences("userDetails", Context.MODE_PRIVATE);
-        String g = savedInstanceState.getString("name","dure giya mor");
+        String g = sharedPreferences.getString("name_key","");
+        name.setText(g);
 
-
-        sharedPreferences.edit().apply();
+        //sharedPreferences.edit().apply();
 
 
     }

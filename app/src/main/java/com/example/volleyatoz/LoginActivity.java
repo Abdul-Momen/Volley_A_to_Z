@@ -47,8 +47,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent(LoginActivity.this,profileActivity.class);
-                startActivity(intent);
+
 
                 username = phone.getText().toString();
                 passwordd = password.getText().toString();
@@ -83,8 +82,10 @@ public class LoginActivity extends AppCompatActivity {
                                        editor.apply();
 
 
-                                       Toast.makeText(LoginActivity.this, "data store succefull", Toast.LENGTH_SHORT).show();
+                                       //Toast.makeText(LoginActivity.this, "data store succefull", Toast.LENGTH_SHORT).show();
                                        Toast.makeText(LoginActivity.this, name__bn, Toast.LENGTH_SHORT).show();
+                                       Intent intent=new Intent(LoginActivity.this,profileActivity.class);
+                                       startActivity(intent);
 
 
                                    } catch (JSONException e) {
